@@ -1,6 +1,7 @@
 package com.ibcs.rm.Service;
 
 import com.ibcs.rm.Entity.NonFunctionalRequirement;
+import com.ibcs.rm.Pojo.NonFrPojo;
 import com.ibcs.rm.Repository.NonFunctionalRequirementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,12 +12,12 @@ import java.util.List;
 public class NonFunctionalRequirementService {
     @Autowired
     NonFunctionalRequirementRepository nonFunctionalRequirementRepository;
-    public NonFunctionalRequirement createNewNonFr(String name, String description, String frId, String title) {
+    public NonFunctionalRequirement createNewNonFr(NonFrPojo pojo) {
         NonFunctionalRequirement nonFunctionalRequirement = new NonFunctionalRequirement();
-        nonFunctionalRequirement.setName(name);
-        nonFunctionalRequirement.setDescription(description);
-        nonFunctionalRequirement.setNonFrId(frId);
-        nonFunctionalRequirement.setNonFrTitle(title);
+        nonFunctionalRequirement.setName(pojo.name);
+        nonFunctionalRequirement.setDescription(pojo.description);
+        nonFunctionalRequirement.setNonFrId(pojo.nonFrId);
+        nonFunctionalRequirement.setNonFrTitle(pojo.nonFrTitle);
         nonFunctionalRequirementRepository.save(nonFunctionalRequirement);
         return  nonFunctionalRequirement;
 

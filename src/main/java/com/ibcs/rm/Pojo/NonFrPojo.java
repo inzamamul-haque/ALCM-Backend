@@ -5,5 +5,5 @@ public class NonFrPojo {
     public String nonFrId;
     public String name;
     public String description;
-    public String brTitle;
+    public String nonFrTitle;
 }
