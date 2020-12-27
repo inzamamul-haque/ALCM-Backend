@@ -10,9 +10,11 @@ import org.springframework.stereotype.Service;
 public class ProjectService {
     @Autowired
     ProjectRepository projectRepository;
-    public void createNewProject(ProjectPojo pojo) {
+    public Project createNewProject(ProjectPojo pojo) {
         Project project = new Project();
         project.setName(pojo.getName());
+        project.setDescription(pojo.getDescription());
         projectRepository.save(project);
+        return project;
     }
 }

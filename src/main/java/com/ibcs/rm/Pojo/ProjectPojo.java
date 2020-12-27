@@ -5,4 +5,5 @@ import lombok.Data;
 @Data
 public class ProjectPojo {
  private String name;
+ private String description;
 }
