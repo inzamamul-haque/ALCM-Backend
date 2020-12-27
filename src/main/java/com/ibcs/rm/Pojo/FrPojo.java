@@ -5,5 +5,5 @@ public class FrPojo {
     public String frId;
     public String name;
     public String description;
-    public String brTitle;
+    public String frTitle;
 }

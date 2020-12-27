@@ -1,6 +1,7 @@
 package com.ibcs.rm.Service;
 
 import com.ibcs.rm.Entity.FunctionalRequirement;
+import com.ibcs.rm.Pojo.FrPojo;
 import com.ibcs.rm.Repository.FunctionalRequirementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,12 +12,13 @@ import java.util.List;
 public class FunctionalRequirementService {
     @Autowired
     FunctionalRequirementRepository functionalRequirementRepository;
-    public FunctionalRequirement createNewFr(String name, String description, String frId, String title ) {
+
+    public FunctionalRequirement createNewFr(FrPojo pojo) {
         FunctionalRequirement functionalRequirement = new FunctionalRequirement();
-        functionalRequirement.setName(name);
-        functionalRequirement.setFrId(frId);
-        functionalRequirement.setFrTitle(title);
-        functionalRequirement.setDescription(description);
+        functionalRequirement.setName(pojo.name);
+        functionalRequirement.setFrId(pojo.frId);
+        functionalRequirement.setFrTitle(pojo.frTitle);
+        functionalRequirement.setDescription(pojo.description);
         functionalRequirementRepository.save(functionalRequirement);
         return  functionalRequirement;
     }
