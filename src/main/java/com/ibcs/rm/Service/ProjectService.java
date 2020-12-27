@@ -6,6 +6,8 @@ import com.ibcs.rm.Repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProjectService {
     @Autowired
@@ -16,5 +18,10 @@ public class ProjectService {
         project.setDescription(pojo.getDescription());
         projectRepository.save(project);
         return project;
+    }
+
+    public List<Project> getAllPmp() {
+        List<Project> projectList = projectRepository.findAll();
+        return projectList;
     }
 }
