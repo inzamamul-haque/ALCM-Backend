@@ -1,8 +1,8 @@
 package com.ibcs.rm.services;
 
 import com.ibcs.rm.domain.model.BusinessRequirement;
-import com.ibcs.rm.pojo.request.BrPojo;
 import com.ibcs.rm.domain.repository.BusinessRequirementRepository;
+import com.ibcs.rm.pojo.request.BrPojo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +17,7 @@ public class BusinessRequirementService {
 
     @Transactional
     public BusinessRequirement createNewBusiness(BrPojo pojo) {
+
         BusinessRequirement businessRequirement =new BusinessRequirement();
         businessRequirement.setName(pojo.name);
         businessRequirement.setBrId(pojo.brId);
@@ -24,7 +25,6 @@ public class BusinessRequirementService {
         businessRequirement.setDescription(pojo.description);
         businessRequirementRepository.save(businessRequirement);
         return businessRequirement;
-
     }
 
     public List<BusinessRequirement> getAllBusinessRequirement() {
