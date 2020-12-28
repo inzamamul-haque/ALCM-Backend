@@ -31,4 +31,14 @@ public class BusinessRequirementService {
         List<BusinessRequirement> businessRequirementList = businessRequirementRepository.findAll();
         return businessRequirementList;
     }
+
+    public BrPojo getSequenceNumber() {
+        List<BusinessRequirement> businessRequirementList = businessRequirementRepository.findAll();
+        int d = businessRequirementList.size() + 1;
+        String pattern = "-00000";
+        String cd = "BR-" + pattern + String.valueOf(d);
+        BrPojo pojo = new BrPojo();
+        pojo.brId = cd;
+        return pojo;
+    }
 }
