@@ -1,4 +1,4 @@
-package com.ibcs.rm.Pojo;
+package com.ibcs.rm.pojo.request;
 
 public class BrPojo {
     public long id;

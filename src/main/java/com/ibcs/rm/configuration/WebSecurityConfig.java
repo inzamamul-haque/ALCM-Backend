@@ -1,4 +1,4 @@
-package com.ibcs.rm.Configuration;
+package com.ibcs.rm.configuration;
 
 import org.springframework.context.annotation.Configuration;
         import org.springframework.security.config.annotation.web.builders.HttpSecurity;

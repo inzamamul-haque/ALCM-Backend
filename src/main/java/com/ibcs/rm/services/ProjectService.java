@@ -1,8 +1,8 @@
-package com.ibcs.rm.Service;
+package com.ibcs.rm.services;
 
-import com.ibcs.rm.Entity.Project;
-import com.ibcs.rm.Pojo.ProjectPojo;
-import com.ibcs.rm.Repository.ProjectRepository;
+import com.ibcs.rm.domain.model.Project;
+import com.ibcs.rm.pojo.request.ProjectPojo;
+import com.ibcs.rm.domain.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

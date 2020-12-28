@@ -1,4 +1,4 @@
-package com.ibcs.rm.Pojo;
+package com.ibcs.rm.pojo.request;
 
 import lombok.Data;
 

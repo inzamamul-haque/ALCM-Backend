@@ -1,4 +1,4 @@
-package com.ibcs.rm.Pojo;
+package com.ibcs.rm.pojo.request;
 
 public class NonFrPojo {
     public long id;

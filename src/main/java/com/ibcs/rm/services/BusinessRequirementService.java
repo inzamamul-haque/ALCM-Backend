@@ -1,8 +1,8 @@
-package com.ibcs.rm.Service;
+package com.ibcs.rm.services;
 
-import com.ibcs.rm.Entity.BusinessRequirement;
-import com.ibcs.rm.Pojo.BrPojo;
-import com.ibcs.rm.Repository.BusinessRequirementRepository;
+import com.ibcs.rm.domain.model.BusinessRequirement;
+import com.ibcs.rm.pojo.request.BrPojo;
+import com.ibcs.rm.domain.repository.BusinessRequirementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,8 @@
-package com.ibcs.rm.Controller;
+package com.ibcs.rm.controller;
 
-import com.ibcs.rm.Entity.NonFunctionalRequirement;
-import com.ibcs.rm.Pojo.NonFrPojo;
-import com.ibcs.rm.Service.NonFunctionalRequirementService;
+import com.ibcs.rm.domain.model.NonFunctionalRequirement;
+import com.ibcs.rm.pojo.request.NonFrPojo;
+import com.ibcs.rm.services.NonFunctionalRequirementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

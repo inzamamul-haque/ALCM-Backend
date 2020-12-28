@@ -1,8 +1,8 @@
-package com.ibcs.rm.Service;
+package com.ibcs.rm.services;
 
-import com.ibcs.rm.Entity.NonFunctionalRequirement;
-import com.ibcs.rm.Pojo.NonFrPojo;
-import com.ibcs.rm.Repository.NonFunctionalRequirementRepository;
+import com.ibcs.rm.domain.model.NonFunctionalRequirement;
+import com.ibcs.rm.pojo.request.NonFrPojo;
+import com.ibcs.rm.domain.repository.NonFunctionalRequirementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

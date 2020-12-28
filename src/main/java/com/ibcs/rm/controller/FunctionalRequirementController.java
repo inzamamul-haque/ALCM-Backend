@@ -1,8 +1,8 @@
-package com.ibcs.rm.Controller;
+package com.ibcs.rm.controller;
 
-import com.ibcs.rm.Entity.FunctionalRequirement;
-import com.ibcs.rm.Pojo.FrPojo;
-import com.ibcs.rm.Service.FunctionalRequirementService;
+import com.ibcs.rm.domain.model.FunctionalRequirement;
+import com.ibcs.rm.pojo.request.FrPojo;
+import com.ibcs.rm.services.FunctionalRequirementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,8 +1,8 @@
-package com.ibcs.rm.Service;
+package com.ibcs.rm.services;
 
-import com.ibcs.rm.Entity.FunctionalRequirement;
-import com.ibcs.rm.Pojo.FrPojo;
-import com.ibcs.rm.Repository.FunctionalRequirementRepository;
+import com.ibcs.rm.domain.model.FunctionalRequirement;
+import com.ibcs.rm.pojo.request.FrPojo;
+import com.ibcs.rm.domain.repository.FunctionalRequirementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

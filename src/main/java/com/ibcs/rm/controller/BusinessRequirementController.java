@@ -1,8 +1,8 @@
-package com.ibcs.rm.Controller;
+package com.ibcs.rm.controller;
 
-import com.ibcs.rm.Entity.BusinessRequirement;
-import com.ibcs.rm.Pojo.BrPojo;
-import com.ibcs.rm.Service.BusinessRequirementService;
+import com.ibcs.rm.domain.model.BusinessRequirement;
+import com.ibcs.rm.pojo.request.BrPojo;
+import com.ibcs.rm.services.BusinessRequirementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
