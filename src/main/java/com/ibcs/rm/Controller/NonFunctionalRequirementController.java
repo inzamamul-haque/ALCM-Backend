@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@CrossOrigin("*")
 @RestController
 @RequestMapping("/Nonfunctional.requirement")
 public class NonFunctionalRequirementController {
@@ -20,7 +19,6 @@ public class NonFunctionalRequirementController {
     }
 
     @GetMapping("/getAllNonFr")
-
     public List<NonFunctionalRequirement> getAllNonFr() {
         return nonFunctionalRequirementService.getAllNonFr();
 
