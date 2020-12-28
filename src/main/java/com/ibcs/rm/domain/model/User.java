@@ -1,21 +1,30 @@
 package com.ibcs.rm.domain.model;
 
+import com.sun.istack.NotNull;
 import lombok.Data;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "user")
 @EntityListeners(AuditingEntityListener.class)
 @Data
 public class User {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private String id;
+
     private String name;
-    private String password;
+
+    @NotNull
+    private String userName;
+
     private String email;
-    @OneToOne
-    UserRole userRole;
+
+    private String phoneNo;
+
 }
