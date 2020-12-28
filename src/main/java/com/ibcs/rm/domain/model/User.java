@@ -1,6 +1,5 @@
 package com.ibcs.rm.domain.model;
 
-import com.sun.istack.NotNull;
 import lombok.Data;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -20,7 +19,6 @@ public class User {
 
     private String name;
 
-    @NotNull
     private String userName;
 
     private String email;

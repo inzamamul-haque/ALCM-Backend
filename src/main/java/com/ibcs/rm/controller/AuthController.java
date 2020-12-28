@@ -1,6 +1,7 @@
 package com.ibcs.rm.controller;
 
 import com.ibcs.rm.pojo.request.CreateUserRequest;
+import com.ibcs.rm.pojo.request.LoginRequest;
 import com.ibcs.rm.pojo.response.IdentityResponse;
 import com.ibcs.rm.services.AuthService;
 import lombok.AllArgsConstructor;
@@ -15,8 +16,8 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("login")
-    public ResponseEntity<IdentityResponse> login() {
-        return authService.login();
+    public ResponseEntity<IdentityResponse> login(@RequestBody LoginRequest loginRequest) {
+        return authService.login(loginRequest);
     }
 
     @PostMapping("signUp")
