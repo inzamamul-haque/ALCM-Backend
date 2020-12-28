@@ -82,7 +82,7 @@ public class AuthService {
         System.out.println("Logged User Role" + loggedUserDetailsResponse.getUserRole());
         System.out.println("Logged User Name" + loggedUserDetailsResponse.getUserName());
 
-        Optional<User> optionalUser = userRepository.findAdminIdByUserNameNative(loggedUserDetailsResponse.getUserName());
+        Optional<User> optionalUser = userRepository.findUserByUserNameNative(loggedUserDetailsResponse.getUserName());
 
         if (!optionalUser.isPresent()) {
             throw new ForbiddenException("User Info Not Found");
@@ -105,9 +105,9 @@ public class AuthService {
             throw new ForbiddenException("User Not Registered");
         }
         LoggedUserDetailsResponse loggedUserDetailsResponse = loggedUserDetailsResponseOptional.get();
+        System.out.println("Logged User role: " + loggedUserDetailsResponse.getUserRole());
 
-
-        Optional<User> optionalUser = userRepository.findAdminIdByUserNameNative(loggedUserDetailsResponse.getUserName());
+        Optional<User> optionalUser = userRepository.findUserByUserNameNative(loggedUserDetailsResponse.getUserName());
         if (!optionalUser.isPresent()) {
             throw new ForbiddenException("User Info Not Found");
         }
