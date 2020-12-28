@@ -1,4 +1,4 @@
-package com.ibcs.rm.Entity;
+package com.ibcs.rm.domain.model;
 
 import lombok.Data;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
