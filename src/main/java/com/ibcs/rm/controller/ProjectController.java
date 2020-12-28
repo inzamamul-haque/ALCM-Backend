@@ -24,4 +24,16 @@ public class ProjectController {
     public List<Project> getAllPmp() {
         return projectService.getAllPmp();
     }
+    @PostMapping(value = "/getProjectById")
+    public Project getProjectById(@RequestBody ProjectPojo pojo) {
+        return projectService.getProjectById(pojo);
+    }
+    @PutMapping(value = "/update")
+    public void updateProject(@RequestBody ProjectPojo pojo) {
+        projectService.updateProject(pojo);
+    }
+    @PostMapping(value = "/delete")
+    public void deleteProject(@RequestBody ProjectPojo pojo){
+        projectService.deleteProject(pojo);
+    }
 }
