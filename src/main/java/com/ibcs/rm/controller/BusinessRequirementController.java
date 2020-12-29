@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/business.requirement")
 public class BusinessRequirementController {
@@ -23,6 +24,10 @@ public class BusinessRequirementController {
     @GetMapping("/getAllBusinessRequirement")
     public List<BusinessRequirement> getAllBusinessRequirement() {
         return businessRequirementService.getAllBusinessRequirement();
+    }
+    @GetMapping("/getSequenceNumber")
+    public BrPojo getSequenceNumber() {
+        return businessRequirementService.getSequenceNumber();
     }
 
 }
