@@ -23,4 +23,8 @@ public class NonFunctionalRequirementController {
         return nonFunctionalRequirementService.getAllNonFr();
 
     }
+    @GetMapping("/getSequenceNumber")
+    public String getSequenceNumber(String type) {
+        return nonFunctionalRequirementService.getSequenceNumber(type);
+    }
 }

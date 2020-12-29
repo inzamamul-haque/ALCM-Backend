@@ -30,4 +30,14 @@ public class BusinessRequirementController {
         return businessRequirementService.getSequenceNumber();
     }
 
+    @PostMapping("/updateProject")
+    public void updateProject(@RequestBody BrPojo pojo) {
+        businessRequirementService.updateProject(pojo);
+    }
+
+    @PostMapping("/getBrProjectById")
+    public BusinessRequirement getBrProjectByID(@RequestBody BrPojo pojo) {
+        return businessRequirementService.getBrProjectByID(pojo);
+    }
+
 }
