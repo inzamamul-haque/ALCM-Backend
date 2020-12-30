@@ -19,5 +19,6 @@ public class FunctionalRequirement {
     @OneToOne
     Project project;
     private String Description;
+    private String fileUrl;
 }
 

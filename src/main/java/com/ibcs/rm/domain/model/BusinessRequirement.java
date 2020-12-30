@@ -22,4 +22,5 @@ public class BusinessRequirement {
     Project project;
     private String Description;
     Date createdDate;
+    private String fileUrl;
 }

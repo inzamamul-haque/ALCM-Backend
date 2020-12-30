@@ -15,4 +15,5 @@ public class Project {
     private long id;
     private String name;
     private String description;
+    private String fileUrl;
 }
