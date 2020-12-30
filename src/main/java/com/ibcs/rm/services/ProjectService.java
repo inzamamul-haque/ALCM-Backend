@@ -38,11 +38,11 @@ public class ProjectService {
 
     @Transactional
     public void updateProject(ProjectPojo pojo) {
-        Optional<Project> project = projectRepository.findById(pojo.projectId);
-        Project project1 = project.get();
-        project1.setName(pojo.getName());
-        project1.setDescription(pojo.getDescription());
-        projectRepository.save(project1);
+        Optional<Project> projectOptional = projectRepository.findById(pojo.projectId);
+        Project project = projectOptional.get();
+        project.setName(pojo.getName());
+        project.setDescription(pojo.getDescription());
+        projectRepository.save(project);
     }
 
     public void deleteProject(ProjectPojo pojo) {
