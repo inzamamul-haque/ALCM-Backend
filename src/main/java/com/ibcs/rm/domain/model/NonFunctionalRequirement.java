@@ -22,6 +22,7 @@ public class NonFunctionalRequirement {
 
     @OneToOne
     BusinessRequirement businessRequirement;
+
     private String Description;
 
     private String fileUrl;

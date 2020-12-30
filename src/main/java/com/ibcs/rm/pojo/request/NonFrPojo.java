@@ -5,5 +5,6 @@ public class NonFrPojo {
     public String brId;
     public String nonFrTitle;
     public String description;
+    public String fileUrl;
 
 }
