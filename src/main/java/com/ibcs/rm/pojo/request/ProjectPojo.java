@@ -7,4 +7,5 @@ public class ProjectPojo {
  public long projectId;
  private String name;
  private String description;
+ private String fileUrl;
 }

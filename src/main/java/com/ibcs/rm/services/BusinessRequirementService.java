@@ -57,6 +57,7 @@ public class BusinessRequirementService {
         businessRequirement1.setName(pojo.name);
         businessRequirement1.setDescription(pojo.description);
         businessRequirement1.setBrTitle(pojo.brTitle);
+        businessRequirement1.setBrId(pojo.brId);
         businessRequirementRepository.save(businessRequirement1);
     }
 
