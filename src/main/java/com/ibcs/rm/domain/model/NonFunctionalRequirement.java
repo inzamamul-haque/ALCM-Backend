@@ -13,12 +13,17 @@ public class NonFunctionalRequirement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String nonFrId;
+
     private String name;
+
     private String nonFrTitle;
+
     @OneToOne
     BusinessRequirement businessRequirement;
     private String Description;
+
     private String fileUrl;
 
 }
