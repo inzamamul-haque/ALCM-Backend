@@ -17,7 +17,7 @@ public class NonFunctionalRequirement {
     private String name;
     private String nonFrTitle;
     @OneToOne
-    Project project;
+    BusinessRequirement businessRequirement;
     private String Description;
     private String fileUrl;
 

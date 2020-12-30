@@ -17,7 +17,7 @@ public class FunctionalRequirement {
     private String name;
     private String frTitle;
     @OneToOne
-    Project project;
+    BusinessRequirement businessRequirement;
     private String Description;
     private String fileUrl;
 }
