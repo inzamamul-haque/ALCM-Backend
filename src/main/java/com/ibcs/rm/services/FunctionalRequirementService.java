@@ -6,6 +6,7 @@ import com.ibcs.rm.domain.repository.FunctionalRequirementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -13,6 +14,7 @@ public class FunctionalRequirementService {
     @Autowired
     FunctionalRequirementRepository functionalRequirementRepository;
 
+    @Transactional
     public FunctionalRequirement createNewFr(FrPojo pojo) {
         FunctionalRequirement functionalRequirement = new FunctionalRequirement();
         functionalRequirement.setName(pojo.name);
