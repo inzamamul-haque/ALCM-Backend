@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/functional.requirement")
 public class FunctionalRequirementController {
@@ -20,10 +21,22 @@ public class FunctionalRequirementController {
     }
 
     @GetMapping("/getAllFr")
-
     public List<FunctionalRequirement> getAllFr() {
         return functionalRequirementService.getAllFr();
-
     }
+    @GetMapping("/getSequenceNumber")
+    public FrPojo getSequenceNumber() {
+        return functionalRequirementService.getSequenceNumber();
+    }
+    @PostMapping("/getProjectById")
+    public FunctionalRequirement getProjectById(@RequestBody FrPojo pojo) {
+        return functionalRequirementService.getProjectById(pojo);
+    }
+
+    @PutMapping(value = "/update")
+    public void updateProject(@RequestBody FrPojo pojo) {
+        functionalRequirementService.updateProject(pojo);
+    }
+
 }
 
