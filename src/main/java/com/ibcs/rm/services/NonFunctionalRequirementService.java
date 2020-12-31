@@ -29,6 +29,7 @@ public class NonFunctionalRequirementService {
         nonFunctionalRequirement.setDescription(pojo.description);
         nonFunctionalRequirement.setNonFrId(pojo.nonFrId);
         nonFunctionalRequirement.setNonFrTitle(pojo.nonFrTitle);
+        nonFunctionalRequirement.setFileUrl(pojo.fileUrl);
         //nonFunctionalRequirement.setBusinessRequirement(pojo.nonFrTitle);
         nonFunctionalRequirementRepository.save(nonFunctionalRequirement);
         return nonFunctionalRequirement;
