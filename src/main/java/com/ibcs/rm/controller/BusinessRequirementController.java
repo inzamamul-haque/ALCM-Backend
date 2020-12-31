@@ -39,5 +39,9 @@ public class BusinessRequirementController {
     public BusinessRequirement getBrProjectByID(@RequestBody BrPojo pojo) {
         return businessRequirementService.getBrProjectByID(pojo);
     }
+    @PostMapping(value = "/delete")
+    public void deleteProject(@RequestBody BrPojo pojo){
+        businessRequirementService.deleteProject(pojo);
+    }
 
 }

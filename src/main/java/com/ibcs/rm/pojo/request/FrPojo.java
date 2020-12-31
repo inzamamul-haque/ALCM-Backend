@@ -6,4 +6,6 @@ public class FrPojo {
     public String name;
     public String description;
     public String frTitle;
+    public Long projectId;
+    public String fileUrl;
 }
