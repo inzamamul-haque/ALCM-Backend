@@ -37,6 +37,10 @@ public class FunctionalRequirementController {
     public void updateProject(@RequestBody FrPojo pojo) {
         functionalRequirementService.updateProject(pojo);
     }
+    @PostMapping(value = "/delete")
+    public void deleteProject(@RequestBody FrPojo pojo){
+        functionalRequirementService.deleteProject(pojo);
+    }
 
 }
 

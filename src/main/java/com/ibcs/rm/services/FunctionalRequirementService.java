@@ -29,6 +29,7 @@ public class FunctionalRequirementService {
         functionalRequirement.setName(pojo.name);
         functionalRequirement.setFrId(pojo.frId);
         functionalRequirement.setFrTitle(pojo.frTitle);
+        functionalRequirement.setFileUrl(pojo.fileUrl);
         functionalRequirement.setDescription(pojo.description);
         functionalRequirementRepository.save(functionalRequirement);
         return  functionalRequirement;
@@ -62,5 +63,12 @@ public class FunctionalRequirementService {
         functionalRequirement.setFrTitle(pojo.frTitle);
         functionalRequirement.setDescription(pojo.description);
         functionalRequirementRepository.save(functionalRequirement);
+    }
+
+    public void deleteProject(FrPojo pojo) {
+        Optional<FunctionalRequirement> optionalFunctionalRequirement = functionalRequirementRepository.findById(pojo.projectId);
+        FunctionalRequirement functionalRequirement = optionalFunctionalRequirement.get();
+        functionalRequirementRepository.delete(functionalRequirement);
+
     }
 }

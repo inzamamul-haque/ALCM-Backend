@@ -7,4 +7,5 @@ public class FrPojo {
     public String description;
     public String frTitle;
     public Long projectId;
+    public String fileUrl;
 }

@@ -7,4 +7,5 @@ public class BrPojo {
     public String name;
     public String description;
     public String brTitle;
+    public String fileUrl;
 }

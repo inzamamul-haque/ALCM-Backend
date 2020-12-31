@@ -29,6 +29,7 @@ public class BusinessRequirementService {
         businessRequirement.setBrId(pojo.brId);
         businessRequirement.setBrTitle(pojo.brTitle);
         businessRequirement.setDescription(pojo.description);
+        businessRequirement.setFileUrl(pojo.fileUrl);
         Optional<Project> pro = projectRepository.findById(pojo.projectId);
         Project project = pro.get();
         businessRequirement.setProject(project);
@@ -66,4 +67,11 @@ public class BusinessRequirementService {
         BusinessRequirement businessRequirement1 = businessRequirement.get();
         return businessRequirement1;
     }
+
+    public void deleteProject(BrPojo pojo) {
+    Optional<BusinessRequirement> optionalBusinessRequirement = businessRequirementRepository.findById(pojo.projectId);
+    BusinessRequirement businessRequirement = optionalBusinessRequirement.get();
+    businessRequirementRepository.delete(businessRequirement);
+    }
+
 }
