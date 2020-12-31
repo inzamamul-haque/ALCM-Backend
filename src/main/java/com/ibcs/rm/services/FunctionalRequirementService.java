@@ -62,6 +62,7 @@ public class FunctionalRequirementService {
         functionalRequirement.setFrId(pojo.frId);
         functionalRequirement.setFrTitle(pojo.frTitle);
         functionalRequirement.setDescription(pojo.description);
+        functionalRequirement.setFileUrl(pojo.fileUrl);
         functionalRequirementRepository.save(functionalRequirement);
     }
 

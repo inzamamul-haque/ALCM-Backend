@@ -43,6 +43,7 @@ public class ProjectService {
         Project project = projectOptional.get();
         project.setName(pojo.getName());
         project.setDescription(pojo.getDescription());
+        project.setFileUrl(pojo.getFileUrl());
         projectRepository.save(project);
     }
 
